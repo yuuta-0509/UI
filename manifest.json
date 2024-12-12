@@ -2,7 +2,7 @@
     "name": "My Web App",
     "short_name": "MyApp",
     "description": "A sample web app to demonstrate PWA features",
-    "start_url": "/index.php",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#94adda",
     "theme_color": "#94adda",
