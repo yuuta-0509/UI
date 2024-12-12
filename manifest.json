@@ -1,6 +1,6 @@
 {
-    "name": "Disaster Prevention App",
-    "short_name": "DisasterApp",
+    "name": "パートナーズ",
+    "short_name": "パートナーズ",
     "description": "A disaster prevention app with map and alerts.",
     "start_url": "/index.html",
     "display": "standalone",
