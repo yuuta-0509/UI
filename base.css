@@ -94,3 +94,9 @@ a:hover{
     width: 100vw;
     height: 80vh;
 }
+header, footer {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  
