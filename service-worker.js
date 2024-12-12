@@ -1,20 +1,21 @@
 self.addEventListener('install', (event) => {
-    console.log('Service Worker installed');
     event.waitUntil(
-      caches.open('my-cache').then((cache) => {
+      caches.open('v1').then((cache) => {
         return cache.addAll([
-            '/',
-            '/index.html',
-            '/timeline.html',
-            '/weather.html',
-            '/mypage.html',
-            '/base.css', 
-            '/index.css' ,// 必要なCSSファイルもキャッシュに追加
-            '/weather.css' ,
-            '/timeline.css',
-            '/mypage.css',
-            '/index.js',
-            '/PartNERS-icon-final.png'
+          '/',
+          '/index.html',
+          '/index.js',
+          '/timeline.html',
+          '/weather.html',
+          '/timeline.css',
+          'weather.css',
+          '/PartNERS-icon-final.png',
+          '/app-icon.png',
+          '/base.css',
+          '/index.css',
+          '/mypage.html',
+          '/mypage.css'
+          // 必要に応じて追加のリソースを追加
         ]);
       })
     );
@@ -22,11 +23,9 @@ self.addEventListener('install', (event) => {
   
   self.addEventListener('fetch', (event) => {
     event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-        return fetch(event.request);
+      caches.match(event.request).then((response) => {
+        return response || fetch(event.request);
       })
     );
   });
+  

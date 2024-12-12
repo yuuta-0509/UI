@@ -1,7 +1,7 @@
 {
-    "name": "My Web App",
-    "short_name": "MyApp",
-    "description": "A sample web app to demonstrate PWA features",
+    "name": "Disaster Prevention App",
+    "short_name": "DisasterApp",
+    "description": "A disaster prevention app with map and alerts.",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#94adda",
@@ -19,3 +19,4 @@
       }
     ]
   }
+  
