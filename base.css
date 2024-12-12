@@ -90,3 +90,7 @@ a:hover{
     color: white;
     text-decoration: none;
 }
+.middle {
+    width: 100vw;
+    height: 80vh;
+}
